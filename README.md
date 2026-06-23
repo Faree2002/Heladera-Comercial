@@ -1,1 +1,2 @@
 # Heladera-Comercial
+El proyecto modela la dinámica térmica y el consumo energético de una heladera comercial. El problema a estudiar es cómo impactan las variables aleatorias del entorno (clima, apertura de puertas por clientes y reposición de mercadería) en el consumo eléctrico mensual y evaluar si una mejora en la aislación térmica (cambio de burletes) genera un ahorro estadísticamente significativo.
