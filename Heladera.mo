@@ -12,7 +12,7 @@ model Heladera
   parameter Real Duracion_Evento = 30    "Duración de cada 'pulso' de apertura [s]";
 
   // --- PARÁMETRO DE POLÍTICA (cambiar para el experimento) ---
-  parameter Real Tiempo_Apertura_Base = 60 "Segundos promedio de apertura [s]";
+  parameter Real Tiempo_Apertura_Base = 5 "Segundos promedio de apertura [s]";
   // Política A (base): 15 s → Política B (mejora): 5 s
 
   // --- VARIABLES CON INCERTIDUMBRE ---
@@ -68,6 +68,7 @@ equation
                - (if estado_compresor then Potencia_refrigeracion else 0)) / C_termica;
 
   der(Energia_consumida) = Potencia_electrica;
+
 
 annotation(
     experiment(StartTime = 0, StopTime = 604800, Tolerance = 1e-06, Interval = 1209.6));
